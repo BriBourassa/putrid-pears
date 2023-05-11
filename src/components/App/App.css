@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'Showtime';
+  src: url(../../assets/Showtime.ttf);
+}
+.App {
+  text-align: center;
+  font-family: 'Showtime';
+  font-size: 50px
+}
