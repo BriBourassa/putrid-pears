@@ -3,22 +3,16 @@
     justify-content: center;
     align-items: center;
     background-color: black;
-
     color: #cfd800;
-    /* text-shadow:
-      0 0 7px #fff,
-      0 0 10px #fff,
-      0 0 21px #fff,
-      0 0 42px #0fa,
-      0 0 82px #0fa,
-      0 0 92px #0fa,
-      0 0 102px #0fa,
-      0 0 151px #0fa; */
 }
 
 img {
     height: 100px;
     margin: 10px;
+}
+
+ .pear{   filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.5));
+    animation: pulsate 1.5s infinite alternate;  
 }
 
 h1 {
