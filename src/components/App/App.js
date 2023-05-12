@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 // import getMovies from '../../APIcalls';
 import TileBucket from '../TileBucket/TileBucket';
+import NavBar from '../NavBar/NavBar';
 import './App.css';
 
 
@@ -25,7 +26,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1>(PUTRID_PEARS)</h1>
+      <NavBar />
       {allMovieTiles.length > 0 ? <h2>GTFO</h2> : <TileBucket allMovies={allMovieTiles}/>}
     </div>
   );
