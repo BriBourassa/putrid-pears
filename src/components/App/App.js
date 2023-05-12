@@ -9,7 +9,6 @@ const App = () => {
   const [allMovieTiles, setAllMovieTiles] = useState([])
   const [selectedMovie, setSelectedMovie] = useState('')
   const [error, setError] = useState("")
-  // const [loading, setLoading] = useState('')
 
   useEffect(() => {
     getMovies()
@@ -19,6 +18,9 @@ const App = () => {
     const url = `https://rancid-tomatillos.herokuapp.com/api/v2/movies/${path}`
     try {
       const response = await fetch(url)
+        if(!response.ok) {
+          throw new Error(' Task Failed Successfully! ')
+        }
       const data = await response.json()
       setAllMovieTiles(({ allMovieTiles: data.movies}))
     } catch(errorOb) {
@@ -29,7 +31,8 @@ const App = () => {
   return (
     <div className="App">
       <NavBar />
-      {allMovieTiles.length > 0 ? <h2>GTFO</h2> : <TileBucket allMovies={allMovieTiles}/>}
+      {error.length > 0 && error}
+       <TileBucket allMovies={allMovieTiles}/>
     </div>
   );
 }
