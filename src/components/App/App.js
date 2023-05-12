@@ -9,6 +9,8 @@ const App = () => {
   const [allMovieTiles, setAllMovieTiles] = useState([])
   const [selectedMovie, setSelectedMovie] = useState('')
   const [error, setError] = useState("")
+  // const [loading, setLoading] = useState('')
+
   useEffect(() => {
     getMovies()
   }, [])
