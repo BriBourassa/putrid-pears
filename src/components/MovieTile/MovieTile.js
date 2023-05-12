@@ -1,12 +1,13 @@
 import React from "react";
 import './MovieTile.css'
 
-const MovieTile = ({movieDetails}) => {
-
+const MovieTile = ({ movieDetails }) => {
+  const { title, poster_path } = movieDetails
   return (
     <div className="movie-tile">
-      <h2 className="tile-heading">Something</h2>
-      <p className="tile-detail">Details</p>
+
+      <h2 className="tile-heading">{title}</h2>
+      <img className="poster" src={poster_path}/>
     </div>
   )
 }

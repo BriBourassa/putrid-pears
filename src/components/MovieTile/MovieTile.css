@@ -1,11 +1,19 @@
 .movie-tile {
   display:flex;
   flex-direction: column;
-  height: 75px;
-  width: auto;
-  margin: 5px;
-  padding: 12px;
-  border: 1px black solid;
+  align-self: center;
+  height: 29rem;
+  width: 13rem;
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px white solid;
+  color: white
+}
+
+.poster {
+  align-self: center;
+  height: 18rem;
+
 }
 
 .tile-heading {
