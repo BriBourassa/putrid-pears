@@ -1,19 +1,24 @@
 import React from "react";
 import MovieTile from "../MovieTile/MovieTile";
+import './TileBucket.css'
 
 const TileBucket = ({allMovies}) => {
-  console.log(allMovies.allMovieTiles)
   const movieData = allMovies.allMovieTiles
-  console.log(movieData)
-  // const mappedFilms = movieData.map((movie)=> {
-  //   return (
-  //     <MovieTile info={movie}/>
-  //   )
-  // })
+  let mappedFilms = [];
+  movieData ? mappedFilms = movieData.map((movie)=>{
+      return (
+        <MovieTile movieDetails={movie} key={movie.id}/>
+      )}) 
+      : console.log('no movieData')
+      
+  console.log('ln 14', mappedFilms)
 
   return (
-    <p>Something</p>
+    <section className="tile-bucket">
+      {mappedFilms}
+    </section>
   )
+
 }
 
 export default TileBucket

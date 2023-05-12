@@ -1,0 +1,9 @@
+.tile-bucket {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  height: auto;
+  width: 100%;
+}
