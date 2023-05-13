@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 // import getMovies from '../../APIcalls';
 import TileBucket from '../TileBucket/TileBucket';
+import MovieDeets from '../MovieDeets/MovieDeets';
 import NavBar from '../NavBar/NavBar';
 import './App.css';
 
@@ -11,15 +12,15 @@ const App = () => {
   const [error, setError] = useState("")
 
   useEffect(() => {
-    getMovies()
+    getData();
   }, [])
   
-  const getMovies = async (path ="") => {
+  const getData = async (path = '') => {
     const url = `https://rancid-tomatillos.herokuapp.com/api/v2/movies/${path}`
     try {
       const response = await fetch(url)
         if(!response.ok) {
-          throw new Error(' Task Failed Successfully! ')
+          throw new Error('All Movie call - Task Failed successfully!')
         }
       const data = await response.json()
       setAllMovieTiles(({ allMovieTiles: data.movies}))
@@ -28,11 +29,13 @@ const App = () => {
     }
   }
 
+
   return (
     <div className="App">
       <NavBar />
+      {/* <MovieDeets singleFilm={selectedMovie}/> */}
       {error.length > 0 && error}
-       <TileBucket allMovies={allMovieTiles} pickMovie={setSelectedMovie}/>
+      <TileBucket allMovies={allMovieTiles} pickMovie={setSelectedMovie}/>
     </div>
   );
 }
