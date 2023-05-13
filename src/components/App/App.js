@@ -32,7 +32,7 @@ const App = () => {
     <div className="App">
       <NavBar />
       {error.length > 0 && error}
-       <TileBucket allMovies={allMovieTiles}/>
+       <TileBucket allMovies={allMovieTiles} pickMovie={setSelectedMovie}/>
     </div>
   );
 }
