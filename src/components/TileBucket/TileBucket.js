@@ -2,11 +2,11 @@ import React from "react";
 import MovieTile from "../MovieTile/MovieTile";
 import './TileBucket.css'
 
-const TileBucket = ({ allMovies, pickMovie }) => {
+const TileBucket = ({ allMovies, getData }) => {
   const movieData = allMovies.allMovieTiles
   const mappedFilms = movieData ? movieData.map((movie)=>{
       return (
-        <MovieTile movieDetails={movie} key={movie.id} pickMovie={pickMovie}/>
+        <MovieTile movieDetails={movie} key={movie.id} getData={getData}/>
       )}) 
       : <p>(Loading...)</p>
 
