@@ -1,5 +1,4 @@
 import './NavBar.css';
-import pear from '../../assets/pear2.png'
 import pearshadow from '../../assets/pearshadow.png'
 
 const NavBar = () => {

@@ -1,19 +1,24 @@
 .movie-tile {
   display:flex;
   flex-direction: column;
-  align-self: center;
-  height: 29rem;
-  width: 13rem;
   margin: 1rem;
-  padding: 1rem;
-  border: 1px white solid;
-  color: white
+  border: 0.5px white solid;
+}
+
+.movie-tile:hover {
+  border: 0.5px #cfd800 solid;
+  cursor: pointer;
+  box-shadow: 0 0 .2rem #fff,
+  0 0 .2rem #fff,
+  0 0 2rem #cfd800,
+  0 0 0.8rem #cfd800,
+  0 0 2.8rem #cfd800,
+  inset 0 0 1.3rem #cfd800; 
 }
 
 .poster {
   align-self: center;
   height: 18rem;
-
 }
 
 .tile-heading {
