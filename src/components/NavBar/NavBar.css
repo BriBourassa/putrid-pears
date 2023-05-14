@@ -1,6 +1,7 @@
 .navbar {
-    display: flex;
-    justify-content: center;
+    /* display: flex; */
+    /* justify-content: center; */
+    height:100%;
     align-items: center;
     background-color: black;
     color: #cfd800;
@@ -8,14 +9,47 @@
 
 .pear-logo {
     height: 100px;
-    margin: 10px;
-    padding-right: 15rem
+    /* margin: 10px; */
+    /* padding-right: 15rem */
+}
+
+.title-container {
+  padding: 80px
 }
 
 h1 {
+   /* padding:0px; */
+   margin: 0;
+    background-color: black;
     /* animation: flicker 1.5s infinite alternate; */
     animation: pulsate 1.5s infinite alternate;    
   }
+
+  .title {
+    padding:0
+  }
+
+  .btn-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .home-btn, .back-btn {
+    color: #cfd800;
+    cursor: pointer;
+    font-size: 2rem;
+    /* font-family: Showtime; */
+    background-color: black;
+    display: inline-block;
+    border: #cfd800 0.4px solid;
+    box-shadow: px 1px 5px #cfd800;
+    animation: pulsate 1.5s infinite alternate; 
+    margin: 20px
+  
+  }
+
+
+
 
   /* .broke{
     animation: flicker 1.5s infinite alternate;

@@ -44,10 +44,11 @@ const App = () => {
 
   return (
     <div className="App">
+      
       <NavBar />
       {/* <MovieDeets singleFilm={selectedMovie}/> */}
       {error.length > 0 && error}
-      <TileBucket allMovies={allMovieTiles} getData={getData}/>
+      <TileBucket allMovies={allMovieTiles} getData={getData} setSelectedMovie={setSelectedMovie}/>
     </div>
   );
 }
