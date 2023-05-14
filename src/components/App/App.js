@@ -3,8 +3,9 @@ import React, { useState, useEffect } from 'react';
 import TileBucket from '../TileBucket/TileBucket';
 import MovieDeets from '../MovieDeets/MovieDeets';
 import NavBar from '../NavBar/NavBar';
+import Error from '../Error/Error';
 import './App.css';
-
+import { Switch, Route, NavLink } from "react-router-dom";
 
 const App = () => {
   const [allMovieTiles, setAllMovieTiles] = useState([])
@@ -44,11 +45,32 @@ const App = () => {
 
   return (
     <div className="App">
+
       
       <NavBar />
-      {/* <MovieDeets singleFilm={selectedMovie}/> */}
-      {error.length > 0 && error}
-      <TileBucket allMovies={allMovieTiles} getData={getData} setSelectedMovie={setSelectedMovie}/>
+
+      <Switch>
+
+        <Route path="/movies/:movieId" render={({match}) => {
+          console.log(match.params)
+          return <MovieDeets id={match.params.id} selectedMovie={selectedMovie}/> 
+          }}>
+        </Route>
+        
+        {/* <Route>
+          <Error message={error}/>
+        </Route> */}
+
+
+        {/* <MovieDeets singleFilm={selectedMovie}/> */}
+
+        <Route exact path="/">
+          <TileBucket allMovies={allMovieTiles} getData={getData} />
+        </Route>
+
+
+      </Switch> 
+
     </div>
   );
 }
