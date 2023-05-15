@@ -3,8 +3,11 @@
   src: url(../../assets/Showtime.ttf);
 }
 .App {
+  display:flex;
+  flex-direction: column;
   text-align: center;
+  align-items: center;
   font-family: 'Showtime';
   font-size: 3rem;
-  background-color: black;
+  background-color: #000000e0;
 }

@@ -1,7 +1,46 @@
-.movie-detai-view {
+.router-link {
+  text-decoration: none;
+  cursor: default;
+  color:  #1E2019;
+  background-size: cover;
+  background-position: center;
+}
+
+.movie-detail-view {
   font-family:'Times New Roman', Times, serif;
   display:flex;
   flex-direction: column;
+  align-items: center;
   height: 95vh;
   width: 80vw;
+}
+
+.movie-overview {
+  margin: 1rem;
+  padding: .75rem;
+  border-radius: 7px;
+  font-size: 22px;
+  width: 45vw;
+  color: #9E6C49;
+  background-color: azure;
+}
+.selected-title {
+  font-family:'Times New Roman', Times, serif;
+  font-size: 5rem;
+  border: 1px white dotted;
+  border-radius: 7px;
+  background-color: #cfd800;
+  padding: 1rem;
+  margin: 1.5rem;
+}
+.selected-tagline {
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 2.25rem;
+  text-shadow:#eaebcfb2;
+  color:#cfd800;
+}
+.poster {
+  max-width: 250px;
+  max-height: 400px;
+  z-index: 0;
 }
