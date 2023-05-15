@@ -51,11 +51,12 @@ const App = () => {
       <NavBar />
       <Switch>
         <Route exact path="/">
-          {error.length > 0 ? <Error message={error}/> 
+          {error.length > 0 ? 
+          <Error message={error}/> 
           : 
           <TileBucket allMovies={allMovieTiles} getData={getData} />}
         </Route>
-        <Route path="/movies/:movieID" render={({match})=> {
+        <Route path="/movies/:anything" render={({match})=> {
           if (selectedMovie) {
             return <MovieDeets selectedMovie={selectedMovie} getData={getData} match={match}/>
           } else {

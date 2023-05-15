@@ -4,9 +4,10 @@
   color:  #1E2019;
   background-size: cover;
   background-position: center;
+  border-radius: .75rem;
 }
 
-.movie-detail-view {
+.movie-detail-main {
   font-family:'Times New Roman', Times, serif;
   display:flex;
   flex-direction: column;
