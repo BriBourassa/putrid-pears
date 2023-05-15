@@ -1,0 +1,6 @@
+.movie-detai-view {
+  display:flex;
+  flex-direction: column;
+  height: 95vh;
+  width: 80vw;
+}

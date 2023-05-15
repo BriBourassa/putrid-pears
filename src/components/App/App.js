@@ -45,16 +45,14 @@ const App = () => {
 
   return (
     <div className="App">
-
-      
       <NavBar />
-
       <Switch>
+        <Route exact path="/">
+          <TileBucket allMovies={allMovieTiles} getData={getData} />
+        </Route>
 
-        <Route path="/movies/:movieId" render={({match}) => {
-          console.log(match.params)
-          return <MovieDeets id={match.params.id} selectedMovie={selectedMovie}/> 
-          }}>
+        <Route path="/movies/">
+          <MovieDeets selectedMovie={selectedMovie} />
         </Route>
         
         {/* <Route>
@@ -63,11 +61,6 @@ const App = () => {
 
 
         {/* <MovieDeets singleFilm={selectedMovie}/> */}
-
-        <Route exact path="/">
-          <TileBucket allMovies={allMovieTiles} getData={getData} />
-        </Route>
-
 
       </Switch> 
 
