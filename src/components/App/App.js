@@ -13,6 +13,7 @@ const App = () => {
   const [error, setError] = useState("")
 
   useEffect(() => {
+    console.log('App useEffect-')
     getData();
   }, [])
   
@@ -20,6 +21,7 @@ const App = () => {
     const url = `https://rancid-tomatillos.herokuapp.com/api/v2/movies/${path}`
     if (path ==='') {
     try {
+      console.log('setAll')
       const response = await fetch(url)
         if(!response.ok) {
           throw new Error('All Movie call - Task Failed successfully!')
@@ -31,6 +33,7 @@ const App = () => {
     }
   } else {
     try {
+      console.log('setSelected:')
       const response = await fetch(url)
         if(!response.ok) {
           throw new Error('Single Movie call - Task Failed successfully!')
@@ -48,19 +51,22 @@ const App = () => {
       <NavBar />
       <Switch>
         <Route exact path="/">
-          <TileBucket allMovies={allMovieTiles} getData={getData} />
+          {error.length > 0 ? <Error message={error}/> 
+          : 
+          <TileBucket allMovies={allMovieTiles} getData={getData} />}
         </Route>
-
-        <Route path="/movies/">
-          <MovieDeets selectedMovie={selectedMovie} />
+        <Route path="/movies/:movieID" render={({match})=> {
+          if (selectedMovie) {
+            return <MovieDeets selectedMovie={selectedMovie} getData={getData} match={match}/>
+          } else {
+            <Error message={error}/>
+          }
+        }}>
         </Route>
         
         {/* <Route>
           <Error message={error}/>
         </Route> */}
-
-
-        {/* <MovieDeets singleFilm={selectedMovie}/> */}
 
       </Switch> 
 

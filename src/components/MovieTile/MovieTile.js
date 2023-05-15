@@ -5,7 +5,6 @@ import { NavLink } from "react-router-dom";
 const MovieTile = ({ movieDetails, getData }) => {
   const { title, poster_path, id } = movieDetails;
   return (
- 
       <NavLink to={`/movies/${id}`}>
         <div
           className="movie-tile"
@@ -16,7 +15,6 @@ const MovieTile = ({ movieDetails, getData }) => {
         <img className="poster-img" src={poster_path} id={id} />
         </div>
       </NavLink>
-  
   );
 };
 
