@@ -9,13 +9,11 @@ const TileBucket = ({ allMovies, getData }) => {
         <MovieTile movieDetails={movie} key={movie.id} getData={getData}/>
       )}) 
       : <p>(Loading...)</p>
-
   return (
     <section className="tile-bucket">
       {mappedFilms}
     </section>
   )
-
 }
 
 export default TileBucket

@@ -3,7 +3,7 @@
     /* justify-content: center; */
     height:100%;
     align-items: center;
-    background-color: black;
+    background-color: #00000000;
     color: #cfd800;
 }
 
@@ -20,7 +20,7 @@
 h1 {
    /* padding:0px; */
    margin: 0;
-    background-color: black;
+    background-color: #00000000;
     /* animation: flicker 1.5s infinite alternate; */
     animation: pulsate 1.5s infinite alternate;    
   }
@@ -39,9 +39,8 @@ h1 {
     cursor: pointer;
     font-size: 2rem;
     /* font-family: Showtime; */
-    background-color: black;
+    background-color: #00000000;
     display: inline-block;
-    border: #cfd800 0.4px solid;
     box-shadow: px 1px 5px #cfd800;
     animation: pulsate 1.5s infinite alternate; 
     margin: 20px

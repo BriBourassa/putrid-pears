@@ -1,13 +1,37 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import './MovieDeets.css'
+import {Link} from 'react-router-dom'
 
-const MovieDeets = ( {selectedMovie} ) => {
-  const { title, id, backdrop_path, overview } = selectedMovie
-  console.log(selectedMovie)
+const MovieDeets = ( {selectedMovie, getData, match} ) => {
+  console.log('ln 6 deets', selectedMovie)
+  console.log('match', match.params)
+  // if (selectedMovie) {
+  //   console.log(selectedMovie)
+  // } else {
+  //   console.log('no selection yet')
+  // }
+  useEffect(() => {
+    console.log('deets useEffect')
+    if (match.params.movieID !== selectedMovie.id) {
+      getData(match.params.movieID);
+    }
+  }, [])
+
+  const { id, poster_path, title, overview, backdrop_path, tagline} = selectedMovie.selectedMovie
+
+  const backdrop = {
+    'backgroundImage': `linear-gradient(rgb(0 0 0 / 17%) 0%, #000 100%), url(${backdrop_path})`
+  }
+
   return (
-    <div className='movie-detail-view'>
-      <h2 className='selected-title'>{title}</h2>
-      <p>{overview}</p>
+    <Link to={`/movies/${id}`} className='router-link' style={backdrop}>
+    <h2 className='selected-title'>{title}</h2>
+    <h3 className='selected-tagline'>{tagline}</h3>
+    <div className='movie-detail-main'>
+      <img src={poster_path} alt={title} className='poster'/>
+      <p className='movie-overview'>{overview}</p>
     </div>
+    </Link>
   )
 }
 

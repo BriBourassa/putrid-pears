@@ -1,11 +1,11 @@
 import React from "react"
-
+import './Error.css'
 
 const Error = ( {message} ) => {
 
     return (
         <div>
-            <h1>{message}</h1>
+            <h1 className='error-message'>{message}</h1>
         </div>
     )
 
