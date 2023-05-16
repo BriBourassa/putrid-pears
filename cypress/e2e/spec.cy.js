@@ -1,9 +1,6 @@
 describe('Main Page', () => {
   beforeEach(() => {
-    cy.intercept('GET', "https://rancid-tomatillos.herokuapp.com/api/v2/movies/", {
-      statusCode: 201,
-      fixture: "allMoviesData.json"
-    })
+    cy.loadMainPage()
     cy.visit('http://localhost:3000/')
   });
 
@@ -13,7 +10,7 @@ describe('Main Page', () => {
   })
 
   it('should display the movies on main page', () => {
-    cy.get('.movie-tile')
+    cy.get('.movie-tile').should('have.length', 3)
       .get('#436270')
       .find('img')
       .get('#724495')
