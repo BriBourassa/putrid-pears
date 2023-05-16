@@ -5,7 +5,7 @@ import MovieDeets from '../MovieDeets/MovieDeets';
 import NavBar from '../NavBar/NavBar';
 import Error from '../Error/Error';
 import './App.css';
-import { Switch, Route, NavLink } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 
 const App = () => {
   const [allMovieTiles, setAllMovieTiles] = useState([])
@@ -21,7 +21,7 @@ const App = () => {
     const url = `https://rancid-tomatillos.herokuapp.com/api/v2/movies/${path}`
     if (path ==='') {
     try {
-      console.log('setAll')
+      // console.log('setAll')
       const response = await fetch(url)
         if(!response.ok) {
           throw new Error('All Movie call - Task Failed successfully!')
@@ -33,7 +33,7 @@ const App = () => {
     }
   } else {
     try {
-      console.log('setSelected:')
+      // console.log('setSelected:')
       const response = await fetch(url)
         if(!response.ok) {
           throw new Error('Single Movie call - Task Failed successfully!')
@@ -56,7 +56,7 @@ const App = () => {
           : 
           <TileBucket allMovies={allMovieTiles} getData={getData} />}
         </Route>
-        <Route path="/movies/:anything" render={({match})=> {
+        <Route path="/movies/:id" render={({match})=> {
           if (selectedMovie) {
             return <MovieDeets selectedMovie={selectedMovie} getData={getData} match={match}/>
           } else {
