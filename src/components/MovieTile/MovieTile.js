@@ -12,7 +12,7 @@ const MovieTile = ({ movieDetails, getData }) => {
           onClick={(event) => {
               getData(event.target.id);
             }}>
-        <img className="poster-img" src={poster_path} id={id} />
+        <img className="poster-img" src={poster_path} id={id} alt={title}/>
         </div>
       </NavLink>
   );
