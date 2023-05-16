@@ -2,9 +2,8 @@ import React from 'react';
 import './MovieDeets.css'
 import {Link} from 'react-router-dom'
 
-const MovieDeets = ( {selectedMovie} ) => {
-
-  const { id, poster_path, title, overview, backdrop_path, tagline} = selectedMovie.selectedMovie
+const MovieDeets = ({ selectedMovie }) => {
+  const { id, poster_path, title, overview, backdrop_path, tagline} = selectedMovie
 
   const backdrop = {
     'backgroundImage': `linear-gradient(rgb(0 0 0 / 17%) 0%, #000 100%), url(${backdrop_path})`

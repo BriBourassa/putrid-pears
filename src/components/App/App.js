@@ -1,51 +1,21 @@
 import React, { useState, useEffect } from 'react';
-// import getMovies from '../../APIcalls';
 import TileBucket from '../TileBucket/TileBucket';
 import MovieDeets from '../MovieDeets/MovieDeets';
 import NavBar from '../NavBar/NavBar';
 import Error from '../Error/Error';
 import './App.css';
 import { Switch, Route } from "react-router-dom";
+import { getAllMovieData, getSingleMovieData } from '../../apiCalls';
 
 const App = () => {
   const [allMovieTiles, setAllMovieTiles] = useState([])
-  const [selectedMovie, setSelectedMovie] = useState('')
+  const [selectedMovie, setSelectedMovie] = useState({})
   const [error, setError] = useState("")
 
   useEffect(() => {
-    console.log('App useEffect-')
-    getData();
+    getAllMovieData(setAllMovieTiles, setError);
   }, [])
   
-  const getData = async (path = '') => {
-    const url = `https://rancid-tomatillos.herokuapp.com/api/v2/movies/${path}`
-    if (path ==='') {
-    try {
-      // console.log('setAll')
-      const response = await fetch(url)
-        if(!response.ok) {
-          throw new Error('All Movie call - Task Failed successfully!')
-        }
-      const data = await response.json()
-      setAllMovieTiles({ allMovieTiles: data.movies})
-    } catch(errorOb) {
-      setError(errorOb.message)
-    }
-  } else {
-    try {
-      // console.log('setSelected:')
-      const response = await fetch(url)
-        if(!response.ok) {
-          throw new Error('Single Movie call - Task Failed successfully!')
-        }
-      const data = await response.json()
-      setSelectedMovie( { selectedMovie: data.movie})
-    } catch(errorOb) {
-      setError(errorOb.message)
-    }
-  }
-  }
-
   return (
     <div className="App">
       <NavBar />
@@ -55,14 +25,16 @@ const App = () => {
           {error.length > 0 ? 
             <Error message={error}/> 
           : 
-            <TileBucket allMovies={allMovieTiles} getData={getData} />}
+            <TileBucket allMovies={allMovieTiles} />}
         </Route>
 
         <Route path="/movies/:id" render={({match})=> {
-          if (selectedMovie === '') {
-            getData(match.params.id)
-          } else {
+        console.log(selectedMovie)
+          if (selectedMovie?.id === +match.params.id) {
             return <MovieDeets selectedMovie={selectedMovie} />
+            // if exists AND id  =
+          } else {
+            getSingleMovieData(setSelectedMovie, setError, match.params.id)
           }
         }}>
         </Route>
