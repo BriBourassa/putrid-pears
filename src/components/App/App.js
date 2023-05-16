@@ -15,21 +15,22 @@ const App = () => {
   useEffect(() => {
     getAllMovieData(setAllMovieTiles, setError);
   }, [])
-  
+
+  if(error) {
+    return <Error message={error}/> 
+  } 
+  // early return ^^
+
   return (
     <div className="App">
       <NavBar />
       <Switch>
 
         <Route exact path="/">
-          {error.length > 0 ? 
-            <Error message={error}/> 
-          : 
-            <TileBucket allMovies={allMovieTiles} />}
+            <TileBucket allMovies={allMovieTiles} />
         </Route>
 
         <Route path="/movies/:id" render={({match})=> {
-        console.log(selectedMovie)
           if (selectedMovie?.id === +match.params.id) {
             return <MovieDeets selectedMovie={selectedMovie} />
             // if exists AND id  =
