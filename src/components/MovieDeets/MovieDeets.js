@@ -1,21 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './MovieDeets.css'
 import {Link} from 'react-router-dom'
 
-const MovieDeets = ( {selectedMovie, getData, match} ) => {
-  // console.log('ln 6 deets', selectedMovie)
-  // console.log('match', match.params)
-  // if (selectedMovie) {
-  //   console.log(selectedMovie)
-  // } else {
-  //   console.log('no selection yet')
-  // }
-  useEffect(() => {
-    console.log('selected, match', selectedMovie.selectedMovie.id, match.params.id)
-    if (match.params.id !== selectedMovie.id) {
-      getData(match.params.id);
-    }
-  }, [])
+const MovieDeets = ( {selectedMovie} ) => {
 
   const { id, poster_path, title, overview, backdrop_path, tagline} = selectedMovie.selectedMovie
 
@@ -33,6 +20,6 @@ const MovieDeets = ( {selectedMovie, getData, match} ) => {
     </div>
     </Link>
   )
-}
+} 
 
 export default MovieDeets;

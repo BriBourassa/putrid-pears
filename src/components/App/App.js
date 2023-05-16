@@ -50,25 +50,22 @@ const App = () => {
     <div className="App">
       <NavBar />
       <Switch>
+
         <Route exact path="/">
           {error.length > 0 ? 
-          <Error message={error}/> 
+            <Error message={error}/> 
           : 
-          <TileBucket allMovies={allMovieTiles} getData={getData} />}
+            <TileBucket allMovies={allMovieTiles} getData={getData} />}
         </Route>
+
         <Route path="/movies/:id" render={({match})=> {
-          if (selectedMovie) {
-            return <MovieDeets selectedMovie={selectedMovie} getData={getData} match={match}/>
+          if (selectedMovie === '') {
+            getData(match.params.id)
           } else {
-            <Error message={error}/>
+            return <MovieDeets selectedMovie={selectedMovie} />
           }
         }}>
         </Route>
-        
-        {/* <Route>
-          <Error message={error}/>
-        </Route> */}
-
       </Switch> 
 
     </div>
