@@ -21,7 +21,6 @@ const App = () => {
   if(error) {
     return <Error message={error}/> 
   } 
-  // early return ^^
 
   return (
     <div className="App">
@@ -30,7 +29,6 @@ const App = () => {
       <SearchBar allMovieTiles={allMovieTiles} setDisplayedMovies={setDisplayedMovies}/>
 
       <Switch>
-
         <Route exact path="/">
             <TileBucket displayedMovies={displayedMovies} setError={setError}/>
         </Route>
@@ -38,16 +36,14 @@ const App = () => {
         <Route path="/movies/:id" render={({match})=> {
           if (selectedMovie?.id === +match.params.id) {
             return <MovieDeets selectedMovie={selectedMovie} />
-            // if exists AND id  =
           } else {
             getSingleMovieData(setSelectedMovie, setError, match.params.id)
           }
         }}>
         </Route>
       </Switch> 
-
     </div>
   );
-}
+};
 
 export default App;
