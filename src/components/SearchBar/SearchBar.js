@@ -1,21 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import './SearchBar.css';
 
-const SearchBar = () => {
+const SearchBar = ( {allMovieTiles, setDisplayedMovies} ) => {
+    const [searchQuery, setSearchQuery] = useState('')
 
+    const handleSearchClick = () => {
+        const movieNameResults = allMovieTiles.filter(
+                movie => movie.title.toLowerCase().includes(searchQuery.toLowerCase())
+                )
+            
+        // const movieGenreResults = allMovieTiles.filter(
+        //     movie => 
+
+        // )
+
+        setDisplayedMovies(movieNameResults)
+        clearSearch()
+    }
+    
+    const clearSearch = () => {
+        setSearchQuery('')
+    }
+    
     return (
-        <div className="search">
-            <p>this is search bar</p>
-            {/* <button>search</button> */}
+        <div className="search-bar">
+            <input type='text' placeholder="Search for a movie" onChange={event => setSearchQuery(event.target.value)} value={searchQuery}/>
+            <button className="btn-search" onClick={handleSearchClick}>Search</button>
         </div>
     )
-
-// search query hook
-
-// 'handle input change' function
-// handle button click
-// 'clear input' function
-
 }
 
 export default SearchBar
