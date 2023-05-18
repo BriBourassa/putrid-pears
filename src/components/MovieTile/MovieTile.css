@@ -5,6 +5,9 @@
   border: 0.5px white solid;
   transition: all .35s ease-in;
 }
+.movie-tile > img {
+  max-width: 100%;
+}
 
 .movie-tile:hover {
   border: 1px #a9ce14 solid;

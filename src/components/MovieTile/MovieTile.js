@@ -1,6 +1,8 @@
 import React from "react";
 import "./MovieTile.css";
 import { NavLink } from "react-router-dom";
+import PropTypes from 'prop-types'
+
 
 const MovieTile = ({ movieDetails }) => {
   const { title, poster_path, id } = movieDetails;
@@ -17,3 +19,10 @@ const MovieTile = ({ movieDetails }) => {
 };
 
 export default MovieTile;
+
+MovieTile.propTypes = {
+  movieDetails : PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    title: PropTypes.string.isRequired,
+    poster_path: PropTypes.string.isRequired})
+}
