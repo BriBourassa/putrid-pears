@@ -10,6 +10,7 @@
   0 0 4.5rem #dcfc5a60,
   0 0 1.3rem #fcfff1de,
   0 0 3.75rem #a9ce14;
+  max-width: 100%;
 }
 
 .movie-detail-main {

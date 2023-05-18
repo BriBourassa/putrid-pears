@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types'
 import MovieTile from "../MovieTile/MovieTile";
 import "./TileBucket.css";
 
@@ -15,3 +16,7 @@ const TileBucket = ({ allMovies }) => {
 };
 
 export default TileBucket;
+
+TileBucket.propTypes = {
+  allMovies : PropTypes.array.isRequired
+}
