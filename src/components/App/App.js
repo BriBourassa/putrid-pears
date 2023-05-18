@@ -6,43 +6,44 @@ import Error from '../Error/Error';
 import './App.css';
 import { Switch, Route } from "react-router-dom";
 import { getAllMovieData, getSingleMovieData } from '../../apiCalls';
+import SearchBar from '../SearchBar/SearchBar';
 
 const App = () => {
   const [allMovieTiles, setAllMovieTiles] = useState([])
+  const [displayedMovies, setDisplayedMovies] = useState([])
   const [selectedMovie, setSelectedMovie] = useState({})
   const [error, setError] = useState("")
 
   useEffect(() => {
-    getAllMovieData(setAllMovieTiles, setError);
+    getAllMovieData(setAllMovieTiles, setDisplayedMovies, setError);
   }, [])
 
   if(error) {
     return <Error message={error}/> 
   } 
-  // early return ^^
 
   return (
     <div className="App">
-      <NavBar />
-      <Switch>
+      <NavBar allMovieTiles={allMovieTiles} setDisplayedMovies={setDisplayedMovies} />
 
+      <SearchBar allMovieTiles={allMovieTiles} setDisplayedMovies={setDisplayedMovies}/>
+
+      <Switch>
         <Route exact path="/">
-            <TileBucket allMovies={allMovieTiles} />
+            <TileBucket displayedMovies={displayedMovies} setError={setError}/>
         </Route>
 
         <Route path="/movies/:id" render={({match})=> {
           if (selectedMovie?.id === +match.params.id) {
             return <MovieDeets selectedMovie={selectedMovie} />
-            // if exists AND id  =
           } else {
             getSingleMovieData(setSelectedMovie, setError, match.params.id)
           }
         }}>
         </Route>
       </Switch> 
-
     </div>
   );
-}
+};
 
 export default App;

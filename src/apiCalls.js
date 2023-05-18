@@ -1,6 +1,6 @@
 const url = `https://rancid-tomatillos.herokuapp.com/api/v2/movies/`;
 
-const getAllMovieData = async (setAllMovieTiles, setError) => {
+const getAllMovieData = async (setAllMovieTiles, setDisplayedMovies, setError) => {
 
   try {
     const response = await fetch(url);
@@ -9,6 +9,7 @@ const getAllMovieData = async (setAllMovieTiles, setError) => {
     }
     const data = await response.json();
     setAllMovieTiles(data.movies);
+    setDisplayedMovies(data.movies);
   } catch (errorOb) {
     setError(errorOb.message);
   }

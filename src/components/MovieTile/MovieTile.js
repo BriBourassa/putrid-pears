@@ -9,7 +9,6 @@ const MovieTile = ({ movieDetails }) => {
         <div
           className="movie-tile"
           id={id}
-          // no onClick here! bad
          >
         <img className="poster-img" src={poster_path} id={id} alt={title}/>
         </div>
