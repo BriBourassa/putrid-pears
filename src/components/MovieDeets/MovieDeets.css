@@ -5,6 +5,11 @@
   background-size: cover;
   background-position: center;
   border-radius: .75rem;
+  box-shadow: 0 0 .2rem #fff,
+  0 0 .7rem #b9c207,
+  0 0 4.5rem #dcfc5a60,
+  0 0 1.3rem #fcfff1de,
+  0 0 3.75rem #a9ce14;
 }
 
 .movie-detail-main {
@@ -28,9 +33,9 @@
 .selected-title {
   font-family:'Times New Roman', Times, serif;
   font-size: 5rem;
-  border: 1px white dotted;
+  border: 1px #d6e1aa solid;
   border-radius: 7px;
-  background-color: #cfd800;
+  background-color: #dcfc5ad1;
   padding: 1rem;
   margin: 1.5rem;
 }

@@ -3,21 +3,27 @@
   flex-direction: column;
   margin: 2rem;
   border: 0.5px white solid;
+  transition: all .35s ease-in;
 }
 
 .movie-tile:hover {
-  border: 0.5px #cfd800 solid;
+  border: 1px #a9ce14 solid;
   cursor: pointer;
   box-shadow: 0 0 .2rem #fff,
   0 0 .2rem #fff,
-  0 0 2rem #cfd800,
-  0 0 0.8rem #cfd800,
-  0 0 2.8rem #cfd800,
-  inset 0 0 1.3rem #cfd800; 
-  transform: scale(1.5); 
-  
+  0 0 2rem #a9ce14,
+  0 0 0.8rem #a9ce14,
+  0 0 2.8rem #a9ce14,
+  inset 0 0 1.3rem #a9ce14; 
+  transform: scale(1.35); 
   content: attr(data-content)
+}
 
+.tile-link {
+  transition: all .35s ease-in;
+} 
+.tile-link:focus {
+  outline-color: #8fd631
 }
 
 .poster-img {
