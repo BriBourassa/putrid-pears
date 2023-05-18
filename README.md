@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+# Putrid Pears - A Movie Browsing Extravaganza
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Abstract:
+[//]: <>
 
-## Available Scripts
+  
+## Installation Instructions:
+[//]: <>
 
-In the project directory, you can run:
+Clone down the repo found at: https://github.com/BriBourassa/putrid-pears
 
-### `npm start`
+1. Install dependencies by using ‘npm install’ in your terminal within each directory. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. To host the front-end website on your local machine, run ’npm start’ in terminal.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Navigate to ‘http://localhost:3000/' in your browser.
 
-### `npm test`
+## Testing Instructions:
+[//]: <>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To run the test suite associated with the classes behind the scenes and how they interact: 
 
-### `npm run build`
+Run 'npm run cypress' from the terminal while within the main directory of the application.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Preview of App:
+[//]: <>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Context:
+[//]: <>
+This project was assigned in module 3 for the Frontend Program, this work was completed between the 10th and 21st of May by our two contributors.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Contributors:
+[//]: <>
+[Bri Bourassa](https://github.com/BriBourassa)
+[Shane Misra](https://github.com/sdmisra)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Learning Goals:
+[//]: <>
+1. Gain experience using React Hooks to create modular UI components
+2. Implement controlled form via React Hooks
+3. Practice Router skillset to provide multi-view experience
+4. Implement Async / Await alongside React Hooks for data manipulation
+5. Provide full E2E coverage with Cypress
+6. Deploy final result
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Future Feature Ideas:
+[//]: <>
+1. Local storage based feature to allow persisent browsing
