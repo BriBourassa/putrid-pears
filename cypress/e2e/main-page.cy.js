@@ -21,12 +21,22 @@ describe('Main Page', () => {
   })
 
   it('should be able to search for a movie by name', () => {
-    cy.get('input[type="text').type('black adam')
+    cy.get('input[type="text"]').type('black adam')
       .should('have.value', 'black adam')
     cy.get('button').eq(1)
       .contains('Search')
       .click()
     cy.get('.movie-tile').should('have.length', 1)
       .find('img', '#436270').should('be.visible')
+  })
+
+  it('should display an error that no movie was found when user searches for a movie not in the list', () => {
+    cy.get('input[type="text"]').type('aaa')
+      .should('have.value', 'aaa')
+    cy.get('button').eq(1)
+      .contains('Search')
+      .click()
+    cy.get('p')
+      .contains('(None_Movies_Left_Beef!)')
   })
 });
