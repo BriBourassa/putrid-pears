@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 const MovieTile = ({ movieDetails }) => {
   const { title, poster_path, id } = movieDetails;
   return (
-      <NavLink to={`/movies/${id}`}>
+      <NavLink to={`/movies/${id}`} className="tile-link">
         <div
           className="movie-tile"
           id={id}
