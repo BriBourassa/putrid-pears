@@ -19,6 +19,10 @@
   align-items: center;
   height: 95vh;
   width: 80vw;
+  background-color:#d6e1aa0a;
+  border-top: 1px rgba(181, 215, 29, 0.286) solid;
+  padding-top: 3rem;
+  padding: 2rem;
 }
 
 .movie-overview {
@@ -44,6 +48,10 @@
   font-size: 2.25rem;
   text-shadow:#eaebcfb2;
   color:#cfd800;
+}
+.detail {
+  color:#cfd800;
+  padding: .35rem;
 }
 .poster {
   max-width: 250px;
