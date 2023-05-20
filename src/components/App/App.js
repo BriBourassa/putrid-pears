@@ -24,10 +24,11 @@ const App = () => {
 
   return (
     <div className="App">
-      <NavBar allMovieTiles={allMovieTiles} setDisplayedMovies={setDisplayedMovies} />
+      <div className='nav-and-search'>
+        <NavBar allMovieTiles={allMovieTiles} setDisplayedMovies={setDisplayedMovies} />
 
-      <SearchBar allMovieTiles={allMovieTiles} setDisplayedMovies={setDisplayedMovies}/>
-
+        <SearchBar allMovieTiles={allMovieTiles} setDisplayedMovies={setDisplayedMovies}/>
+      </div>
       <Switch>
         <Route exact path="/">
             <TileBucket displayedMovies={displayedMovies} setError={setError}/>

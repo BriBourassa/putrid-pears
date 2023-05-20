@@ -16,10 +16,10 @@ const SearchBar = ( {allMovieTiles, setDisplayedMovies} ) => {
         setSearchQuery('')
     }
     return (
-        <div className="search-bar">
-            <input type='text' placeholder="Search for a movie" onChange={event => setSearchQuery(event.target.value)} value={searchQuery}/>
-            <button className="btn-search" onClick={handleSearchClick}>Search</button>
-        </div>
+            <div className="search-bar">
+                <input type='text' className="input-bar" placeholder="Search for a movie" onChange={event => setSearchQuery(event.target.value)} value={searchQuery}/>
+                <button className="btn-search" onClick={handleSearchClick}>Search</button>
+            </div>
     )
 };
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import './MovieDeets.css'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
 const MovieDeets = ({ selectedMovie }) => {
