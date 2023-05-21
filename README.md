@@ -1,9 +1,10 @@
-# Putrid Pears - A Movie Browsing Extravaganza
+# Putrid Pears - Movie Browsing Simplified
 
 ## Abstract:
-[//]: <>
+[//]: <> 
 
-  
+With so many decisions to make as one heads into the weekend, anything that simplifies the task of looking for a film for movie night is a welcome reprieve. Enter Putrid Pears, a movie browsing app that keeps it simple and well lit to help guide our users to the a film they can look forward to!
+
 ## Installation Instructions:
 [//]: <>
 
@@ -25,6 +26,9 @@ Run 'npm run cypress' from the terminal while within the main directory of the a
 
 ## Preview of App:
 [//]: <>
+<img width="1423" alt="Screenshot 2023-05-21 at 5 32 19 PM" src="https://github.com/BriBourassa/putrid-pears/assets/117242156/39e6aa42-cf79-481f-87f7-e66978fa01c2">
+<img width="1425" alt="Screenshot 2023-05-21 at 5 33 27 PM" src="https://github.com/BriBourassa/putrid-pears/assets/117242156/11d41f51-4493-4b05-98bc-43e8afa2b91c">
+<img width="1420" alt="Screenshot 2023-05-21 at 5 33 41 PM" src="https://github.com/BriBourassa/putrid-pears/assets/117242156/a1dc64dd-a74a-458e-8224-98d43999d4f7">
 
 
 ## Context:
