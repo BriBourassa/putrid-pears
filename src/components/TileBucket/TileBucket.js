@@ -19,5 +19,5 @@ const TileBucket = ({ displayedMovies }) => {
 export default TileBucket;
 
 TileBucket.propTypes = {
-  allMovies : PropTypes.array.isRequired
+  allMovies : PropTypes.array
 }

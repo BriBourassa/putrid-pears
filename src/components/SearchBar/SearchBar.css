@@ -1,4 +1,19 @@
-.search-bar {
+.input-bar {
    font-family: 'Courier New', Courier, monospace;
+   font-size: 1.6rem;
+   border: 3px solid #cfd800;
+   padding: 5px;
+}
+
+.btn-search {
+   color: #cfd800;
+   cursor: pointer;
    font-size: 2rem;
+   background-color: #00000000;
+   display: inline-block;
+   box-shadow: px 1px 5px #cfd800;
+   animation: pulsate 1.5s infinite alternate; 
+   margin: 20px;
+   font-family: 'Courier New', Courier, monospace;
+   margin-bottom: 3.75rem;
 }
