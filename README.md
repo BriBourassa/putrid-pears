@@ -3,7 +3,7 @@
 ## Abstract:
 [//]: <> 
 
-With so many decisions to make as one heads into the weekend, anything that simplifies the task of looking for a film for movie night is a welcome reprieve. Enter Putrid Pears, a movie browsing app that keeps it simple and well lit to help guide our users to the a film they can look forward to!
+With so many decisions to make as one heads into the weekend, anything that simplifies the task of looking for a film for movie night is a welcome reprieve. Enter Putrid Pears, a movie browsing app that keeps it simple and well lit to help guide our users to the film they can look forward to!
 
 ## Installation Instructions:
 [//]: <>
