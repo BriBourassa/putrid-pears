@@ -13,6 +13,15 @@
   max-width: 100%;
 }
 
+.pear-point {
+  max-width: 2.5rem;
+}
+
+.peared-items {
+  display: flex;
+  align-items: center;
+}
+
 .movie-detail-main {
   font-family: 'Courier New', Courier, monospace;
   display:flex;
@@ -24,6 +33,7 @@
   border-top: 1px rgba(181, 215, 29, 0.286) solid;
   padding-top: 3rem;
   padding: 2rem;
+  margin: 5rem;
 }
 
 .movie-overview {
@@ -35,6 +45,7 @@
   color: #9E6C49;
   background-color: azure;
 }
+
 .selected-title {
   font-family: 'Courier New', Courier, monospace;
   font-size: 5rem;
@@ -44,16 +55,19 @@
   padding: 1rem;
   margin: 1.5rem;
 }
+
 .selected-tagline {
   font-family: 'Courier New', Courier, monospace;
   font-size: 2.25rem;
   text-shadow:#eaebcfb2;
   color:#cfd800;
 }
+
 .detail {
   color:#cfd800;
   padding: .35rem;
 }
+
 .poster {
   max-width: 250px;
   max-height: 400px;

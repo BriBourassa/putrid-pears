@@ -3,7 +3,6 @@
    font-size: 1.6rem;
    border: 3px solid #cfd800;
    padding: 5px;
-
 }
 
 .btn-search {
@@ -16,4 +15,5 @@
    animation: pulsate 1.5s infinite alternate; 
    margin: 20px;
    font-family: 'Courier New', Courier, monospace;
+   margin-bottom: 3.75rem;
 }

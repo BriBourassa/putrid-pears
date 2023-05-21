@@ -7,8 +7,6 @@
 
 .pear-logo {
     height: 100px;
-    /* margin: 10px; */
-    /* padding-right: 15rem */
 }
 
 .title-container {
@@ -16,10 +14,8 @@
 }
 
 h1 {
-   /* padding:0px; */
-   margin: 0;
+    margin: 0;
     background-color: #00000000;
-    /* animation: flicker 1.5s infinite alternate; */
     animation: pulsate 1.5s infinite alternate;    
   }
 
@@ -39,28 +35,6 @@ h1 {
     font-family: 'Courier New', Courier, monospace;
     letter-spacing: 3px;
     font-weight: 100;
-  }
-
-  /* .broke{
-    animation: flicker 1.5s infinite alternate;
-  } */
-
-@keyframes flicker {
-  
-    0%, 18%, 22%, 25%, 53%, 57%, 100% {
-      text-shadow:
-        0 0 4px #fff,
-        0 0 11px #fff,
-        0 0 19px #fff,
-        0 0 40px #cfd800,
-        0 0 80px #cfd800,
-        0 0 90px #cfd800,
-        0 0 100px #cfd800,
-        0 0 150px #cfd800;
-      }
-      20%, 24%, 55% {       
-      text-shadow: none;
-    };
   }
 
 @keyframes pulsate {
